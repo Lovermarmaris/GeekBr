@@ -1,24 +1,26 @@
-class Cat extends Animal {
-    private final int maxForRun = 200;
-    private final int maxForJump = 2;
+public class Cat {
+    private final String name;
+    private static int appetite;
+    private boolean fullness = false;
 
-    protected Cat(String _name) {
-        super(_name);
+    protected Cat(String _name, int _appetite) {
+        name = _name;
+        appetite = _appetite;
     }
 
-    protected boolean run(int distance) {
-        super.max = maxForRun;
-        super.distance = distance;
-        return super.isCan();
+    protected void catInfo() {
+        System.out.println("Имя " + name + " Аппетит " + appetite);
     }
 
-    public boolean jump(int distance) {
-        super.max = maxForJump;
-        super.distance = distance;
-        return super.isCan();
-    }
-
-    public boolean swim(int distance) {
-        return false;
+    protected boolean toFeed() {
+        int a = Bowl.foodInBowlNow - appetite;
+        if (a > 0) {
+            Bowl.foodInBowlNow = a;
+            this.fullness = true;
+            System.out.println("Кот сытый");
+        } else {
+            System.out.println("В миске мало еды для кота! Кот голодный!");
+        }
+        return fullness;
     }
 }
