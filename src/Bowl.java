@@ -1,9 +1,7 @@
 public class Bowl {
-    private int volumeBowl;
-    protected static int foodInBowlNow;
+    protected int foodInBowlNow;
 
-    protected Bowl(int _volume, int _foodInBowlNow){
-        this.volumeBowl = _volume;
+    protected Bowl(int _maxVolume, int _foodInBowlNow){
         foodInBowlNow = _foodInBowlNow;
     }
     protected void putFoodInBowl(int volumeFoodToPut){

@@ -1,6 +1,6 @@
 public class Cat {
     private final String name;
-    private static int appetite;
+    private final int appetite;
     private boolean fullness = false;
 
     protected Cat(String _name, int _appetite) {
@@ -8,19 +8,13 @@ public class Cat {
         appetite = _appetite;
     }
 
-    protected void catInfo() {
-        System.out.println("Имя " + name + " Аппетит " + appetite);
-    }
-
-    protected boolean toFeed() {
-        int a = Bowl.foodInBowlNow - appetite;
-        if (a > 0) {
-            Bowl.foodInBowlNow = a;
-            this.fullness = true;
-            System.out.println("Кот сытый");
+    protected boolean toFeedCats(Bowl bowl1){
+        if((bowl1.foodInBowlNow - appetite) >= 0){
+            fullness = true;
+            System.out.println(name + " ссытый");
+            bowl1.foodInBowlNow = bowl1.foodInBowlNow - appetite;
         } else {
-            System.out.println("В миске мало еды для кота! Кот голодный!");
-        }
-        return fullness;
+            System.out.println(name + " голодный! Добавьте еды в миску");
+        } return fullness;
     }
 }
