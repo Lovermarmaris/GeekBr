@@ -12,10 +12,6 @@ public abstract class Animal {
         System.out.println("Animal: " + this.name);
     }
     protected boolean isCan() {
-        boolean result = true;
-        if (this.distance > this.max) {
-            result = false;
-        }
-        return result;
+        return this.distance <= this.max;
     }
 }
