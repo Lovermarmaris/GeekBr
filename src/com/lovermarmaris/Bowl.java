@@ -1,3 +1,4 @@
+package com.lovermarmaris;
 public class Bowl {
     protected int foodInBowlNow;
 

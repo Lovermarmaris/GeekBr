@@ -1,3 +1,4 @@
+package com.lovermarmaris;
 public class Cat {
     private final String name;
     private final int appetite;

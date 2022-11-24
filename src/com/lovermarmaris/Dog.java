@@ -1,3 +1,4 @@
+package com.lovermarmaris;
 class Dog extends Animal {
     private final int MAX_FOR_RUN = 500;
     private final int MAX_FOR_SWIM = 10;

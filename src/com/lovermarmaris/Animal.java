@@ -1,3 +1,4 @@
+package com.lovermarmaris;
 public abstract class Animal {
     protected String name;
     protected int max;
