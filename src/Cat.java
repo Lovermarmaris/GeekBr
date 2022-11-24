@@ -13,9 +13,8 @@ public class Cat {
     }
 
     protected boolean toFeed() {
-        int a = Bowl.foodInBowlNow - appetite;
-        if (a > 0) {
-            Bowl.foodInBowlNow = a;
+        if (Bowl.foodInBowlNow - appetite > 0) {
+            Bowl.foodInBowlNow = Bowl.foodInBowlNow - appetite;
             this.fullness = true;
             System.out.println("Кот сытый");
         } else {

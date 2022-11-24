@@ -7,7 +7,7 @@ public class Bowl {
         foodInBowlNow = _foodInBowlNow;
     }
     protected void putFoodInBowl(int volumeFoodToPut){
-        foodInBowlNow = foodInBowlNow + volumeFoodToPut;
+        foodInBowlNow += volumeFoodToPut;
     }
     protected int foodInBowlNowInfo(){
         return foodInBowlNow;
